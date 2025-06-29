@@ -50,48 +50,20 @@
       padding: 16px 20px;
       color: #222;
       box-shadow: 0 2px 8px rgba(0,0,0,0.04);
-    }
-    form {
-      background: #fff;
-      border-radius: 10px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
-      padding: 24px;
-      max-width: 600px;
-      margin: 0 auto 30px auto;
-    }
-    label { display: block; margin-bottom: 8px; font-weight: bold; }
-    input, textarea {
-      width: 100%;
-      padding: 10px;
-      margin-bottom: 18px;
-      border: 1px solid #bbb;
-      border-radius: 6px;
-      font-size: 1em;
-      background: #fafafa;
-      transition: border 0.2s;
-    }
-    input:focus, textarea:focus { border: 1.5px solid #388e3c; outline: none; }
-    button {
-      background: #388e3c;
-      color: white;
-      border: none;
-      border-radius: 6px;
-      padding: 12px 28px;
       font-size: 1.1em;
-      font-weight: bold;
-      cursor: pointer;
-      transition: background 0.2s;
-      box-shadow: 0 1px 4px rgba(56,142,60,0.12);
+      line-height: 1.7;
     }
-    button:hover, button:focus { background: #256029; }
-    .required { color: #b71c1c; margin-left: 2px; }
-    .alt-contact { font-size: 1em; margin-top: 10px; }
+    .contact-email {
+      font-size: 1.15em;
+      font-weight: bold;
+      color: #388e3c;
+      word-break: break-all;
+    }
     footer { text-align: center; font-size: 0.9em; padding: 20px; background: #eee; }
     @media (max-width: 600px) {
       header { padding: 60px 10px 30px 10px; }
       .content { padding: 10px; }
       header img { height: 80px; max-width: 200px; }
-      form { padding: 12px; }
     }
   </style>
 </head>
@@ -109,32 +81,24 @@
   <main class="content">
     <section class="contact-info">
       <p>
-        Questions about our compost, products, or just want to connect? Fill out the form below and we'll get back to you as soon as possible.
+        Have questions about our compost, products, or just want to connect with our family farm?<br>
+        Reach out and we’ll get back to you as soon as possible!
       </p>
-      <p class="alt-contact">
-        Or email us directly at 
-        <a href="mailto:info@grazeandgrow.com">info@grazeandgrow.com</a>
+      <p>
+        <span class="contact-email">
+          <a href="mailto:info@grazeandgrow.com">info@grazeandgrow.com</a>
+        </span>
         <br>
         Woodinville, WA
       </p>
+      <p>
+        You can also find us at the barn, on the trails, or out delivering compost—don’t hesitate to say hello!
+      </p>
     </section>
-    <form name="contact" method="POST" data-netlify="true" autocomplete="on">
-      <input type="hidden" name="form-name" value="contact">
-      <label for="name">Name<span class="required">*</span></label>
-      <input type="text" id="name" name="name" required autocomplete="name" />
-
-      <label for="email">Email<span class="required">*</span></label>
-      <input type="email" id="email" name="email" required autocomplete="email" />
-
-      <label for="message">Message<span class="required">*</span></label>
-      <textarea id="message" name="message" rows="6" required></textarea>
-
-      <button type="submit">Send Message</button>
-    </form>
     <section>
       <h2>Thank You!</h2>
       <p>
-        We appreciate your interest in Graze and Grow. We do our best to respond quickly. If you don’t hear back within a day, feel free to reach out again or check your spam folder.
+        We appreciate your interest in Graze and Grow. Supporting local, family-run businesses helps our community thrive.
       </p>
     </section>
   </main>
