@@ -21,10 +21,24 @@
       padding: 100px 20px 50px 20px;
       filter: brightness(0.9) blur(0.2px);
     }
-    header h1, header p {
+    header h1, header p, header img {
       position: relative;
       z-index: 1;
       filter: none;
+    }
+    header img {
+      height: 72px;
+      margin-bottom: 18px;
+      margin-top: 8px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 4px 8px;
+      max-width: 180px;
+      width: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
     }
     .content { max-width: 900px; margin: auto; padding: 20px; }
     .section-img { width: 100%; max-height: 300px; object-fit: cover; margin-top: 10px; border-radius: 8px; }
@@ -37,6 +51,7 @@
       header { padding: 60px 10px 30px 10px; }
       .content { padding: 10px; }
       .section-img { max-height: 200px; }
+      header img { height: 48px; max-width: 120px; }
     }
   </style>
 </head>
@@ -47,6 +62,7 @@
     <a href="contact.html">Contact</a>
   </nav>
   <header>
+    <img src="logo.png" alt="Graze and Grow logo" />
     <h1>Graze and Grow</h1>
     <p>Organic Compost from Happy Horses in Woodinville, WA</p>
   </header>
