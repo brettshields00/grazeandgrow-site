@@ -1,47 +1,146 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Contact – Graze and Grow</title>
+  <title>Contact Us | Graze and Grow</title>
+  <meta name="description" content="Contact Graze and Grow for questions about compost, products, or to connect with our family farm in Woodinville, WA.">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fafafa; color: #222; }
     nav { background: #333; padding: 10px; }
     nav a { color: white; margin: 10px; text-decoration: none; }
-    header, section { padding: 20px; }
+    nav a:focus, nav a:hover { text-decoration: underline; }
     header {
-      background-image: url('hero.jpg');
+      position: relative;
+      background-image: linear-gradient(rgba(38, 50, 56, 0.45), rgba(38, 50, 56, 0.75)), url('hero.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
       text-align: center;
-      padding: 100px 20px;
+      padding: 100px 20px 50px 20px;
+      filter: brightness(0.9) blur(0.2px);
     }
-    .section-img { width: 100%; max-height: 300px; object-fit: cover; margin-top: 10px; }
-    .content { max-width: 900px; margin: auto; }
+    header h1, header p, header img {
+      position: relative;
+      z-index: 1;
+      filter: none;
+    }
+    header img {
+      height: 120px;
+      margin-bottom: 18px;
+      margin-top: 8px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 4px 8px;
+      max-width: 320px;
+      width: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .content { max-width: 900px; margin: auto; padding: 20px; }
+    section { margin-bottom: 2.5em; }
+    .highlight { color: #388e3c; font-weight: bold; }
+    .contact-info {
+      margin: 20px 0 40px 0;
+      background: #e8f5e9;
+      border-radius: 8px;
+      padding: 16px 20px;
+      color: #222;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.04);
+    }
+    form {
+      background: #fff;
+      border-radius: 10px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+      padding: 24px;
+      max-width: 600px;
+      margin: 0 auto 30px auto;
+    }
+    label { display: block; margin-bottom: 8px; font-weight: bold; }
+    input, textarea {
+      width: 100%;
+      padding: 10px;
+      margin-bottom: 18px;
+      border: 1px solid #bbb;
+      border-radius: 6px;
+      font-size: 1em;
+      background: #fafafa;
+      transition: border 0.2s;
+    }
+    input:focus, textarea:focus { border: 1.5px solid #388e3c; outline: none; }
+    button {
+      background: #388e3c;
+      color: white;
+      border: none;
+      border-radius: 6px;
+      padding: 12px 28px;
+      font-size: 1.1em;
+      font-weight: bold;
+      cursor: pointer;
+      transition: background 0.2s;
+      box-shadow: 0 1px 4px rgba(56,142,60,0.12);
+    }
+    button:hover, button:focus { background: #256029; }
+    .required { color: #b71c1c; margin-left: 2px; }
+    .alt-contact { font-size: 1em; margin-top: 10px; }
     footer { text-align: center; font-size: 0.9em; padding: 20px; background: #eee; }
+    @media (max-width: 600px) {
+      header { padding: 60px 10px 30px 10px; }
+      .content { padding: 10px; }
+      header img { height: 80px; max-width: 200px; }
+      form { padding: 12px; }
+    }
   </style>
 </head>
-
 <body>
+  <nav aria-label="Main navigation">
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html" aria-current="page">Contact</a>
+  </nav>
+  <header>
+    <img src="logo.png" alt="Graze and Grow logo" />
+    <h1>Contact Us</h1>
+    <p>We'd love to hear from you!</p>
+  </header>
+  <main class="content">
+    <section class="contact-info">
+      <p>
+        Questions about our compost, products, or just want to connect? Fill out the form below and we'll get back to you as soon as possible.
+      </p>
+      <p class="alt-contact">
+        Or email us directly at 
+        <a href="mailto:info@grazeandgrow.com">info@grazeandgrow.com</a>
+        <br>
+        Woodinville, WA
+      </p>
+    </section>
+    <form name="contact" method="POST" data-netlify="true" autocomplete="on">
+      <input type="hidden" name="form-name" value="contact">
+      <label for="name">Name<span class="required">*</span></label>
+      <input type="text" id="name" name="name" required autocomplete="name" />
 
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
+      <label for="email">Email<span class="required">*</span></label>
+      <input type="email" id="email" name="email" required autocomplete="email" />
 
-<div class="content">
-  <section>
-    <h2>Contact Us</h2>
-    <p>Email us at <a href="mailto:info@grazeandgrow.com">info@grazeandgrow.com</a></p>
-    <p>We are available by appointment only. Please reach out to schedule a pickup or consultation.</p>
-  </section>
-</div>
-<footer>
-  &copy; 2019 Graze and Grow – Woodinville, WA | Email: info@grazeandgrow.com
-</footer>
+      <label for="message">Message<span class="required">*</span></label>
+      <textarea id="message" name="message" rows="6" required></textarea>
+
+      <button type="submit">Send Message</button>
+    </form>
+    <section>
+      <h2>Thank You!</h2>
+      <p>
+        We appreciate your interest in Graze and Grow. We do our best to respond quickly. If you don’t hear back within a day, feel free to reach out again or check your spam folder.
+      </p>
+    </section>
+  </main>
+  <footer>
+    Established in 2019 &mdash; Graze and Grow – Woodinville, WA |
+    <a href="mailto:info@grazeandgrow.com">info@grazeandgrow.com</a>
+  </footer>
 </body>
 </html>
