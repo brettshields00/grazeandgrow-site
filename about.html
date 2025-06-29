@@ -1,47 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>About – Graze and Grow</title>
+  <title>About Us | Graze and Grow</title>
+  <meta name="description" content="Learn about the family behind Graze and Grow, passionate about horses, the outdoors, and healthy, sustainable living.">
   <style>
-    body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+    body { font-family: Arial, sans-serif; margin: 0; padding: 0; background: #fafafa; color: #222; }
     nav { background: #333; padding: 10px; }
     nav a { color: white; margin: 10px; text-decoration: none; }
-    header, section { padding: 20px; }
+    nav a:focus, nav a:hover { text-decoration: underline; }
     header {
-      background-image: url('hero.jpg');
+      position: relative;
+      background-image: linear-gradient(rgba(38, 50, 56, 0.45), rgba(38, 50, 56, 0.75)), url('hero.jpg');
       background-size: cover;
       background-position: center;
       color: white;
       text-shadow: 1px 1px 4px rgba(0,0,0,0.8);
       text-align: center;
-      padding: 100px 20px;
+      padding: 100px 20px 50px 20px;
+      filter: brightness(0.9) blur(0.2px);
     }
-    .section-img { width: 100%; max-height: 300px; object-fit: cover; margin-top: 10px; }
-    .content { max-width: 900px; margin: auto; }
-    footer { text-align: center; font-size: 0.9em; padding: 20px; background: #eee; }
-  </style>
-</head>
-
-<body>
-
-<nav>
-  <a href="index.html">Home</a>
-  <a href="about.html">About</a>
-  <a href="contact.html">Contact</a>
-</nav>
-
-<div class="content">
-  <section>
-    <h2>About Us</h2>
-    <p>Graze and Grow started as a family passion for sustainability and gardening. With a small horse farm in Woodinville, WA, we saw an opportunity to share our compost with the community and support healthier soil everywhere.</p>
-    <p>Every batch is processed with care and cured to ensure it's garden-safe and nutrient-rich.</p>
-  </section>
-</div>
-<footer>
-  &copy; 2019 Graze and Grow – Woodinville, WA | Email: info@grazeandgrow.com
-</footer>
-</body>
-</html>
+    header h1, header p, header img {
+      position: relative;
+      z-index: 1;
+      filter: none;
+    }
+    header img {
+      height: 120px;
+      margin-bottom: 18px;
+      margin-top: 8px;
+      background: white;
+      border-radius: 12px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.06);
+      padding: 4px 8px;
+      max-width: 320px;
+      width: auto;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+    .content { max-width: 900px; margin: auto; padding: 20px; }
+    .section-img { width: 100%; max-height: 300px; object-fit: cover; margin-top: 10px; border-radius: 8px; }
+    section { margin-bottom: 2.5em; }
+    .highlight {
+
